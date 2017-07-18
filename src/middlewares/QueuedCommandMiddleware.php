@@ -6,7 +6,6 @@ use trntv\bus\interfaces\Middleware;
 use trntv\bus\interfaces\QueuedCommand;
 use yii\base\Object;
 use yii\di\Instance;
-use yii\queue\QueueInterface;
 
 /**
  * Class QueuedCommandMiddleware
@@ -16,7 +15,7 @@ use yii\queue\QueueInterface;
 class QueuedCommandMiddleware extends Object implements Middleware
 {
     /**
-     * @var mixed|QueueInterface
+     * @var mixed|\yii\queue\QueueInterface
      */
     public $queue = 'queue';
 
